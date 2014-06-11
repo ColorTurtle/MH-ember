@@ -1,0 +1,331 @@
+$icon-font-path: "../styles/fonts/"; // Change the path to the fonts
+@import "bootstrap-sass/lib/bootstrap";
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #666565;
+}
+
+a {
+    color: #289BDD;
+    &:hover {
+        color: #2085BF;
+    }
+}
+// Typography
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-allcaps {
+    text-transform: uppercase;
+}
+
+.text-quote {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.left-content {
+    padding-right: 60px;
+}
+
+/* Custom page header */
+.navigation {
+    background: rgb(251, 246, 239);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    img.logo {
+        width: 350px;
+    }
+}
+
+.nav-options {
+    li {
+        display: inline-block;
+        letter-spacing: 0.0525em;
+        padding: 8px 15px;
+        // border-radius: 4px;
+        // border: 1px solid rgb(66, 149, 197);
+        // background: #fff;
+    }
+}
+
+ // Buttons
+.btn-login {
+    border-radius: 4px;
+    border: 1px solid rgb(66, 149, 197);
+    background: #fff;
+
+    &:hover {
+        background: rgb(66, 149, 197);
+        a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+            }
+        }
+    }
+}
+
+button.cta-btn {
+    border: 1px solid rgb(95, 196, 95);
+    list-style: none;
+    padding: 15px 25px 5px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-shadow: 0px 1px 0px rgb(95, 196, 95);
+    background: rgb(142, 220, 142);
+    color: #fff;
+    line-height: 30px;
+
+    span.glyphicon {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        margin-left: 15px;
+
+    }
+
+    &:hover {
+        background: rgb(95, 196, 95);
+    }
+
+    a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+}
+
+.sub-nav {
+    padding-left: 0px;
+    a {
+        color: #fff;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    li {
+        border: 1px solid rgb(95, 196, 95);
+        list-style: none;
+        padding: 15px 25px;
+        border-radius: 4px;
+        text-shadow: 0px 1px 0px rgb(95, 196, 95);
+        background: #8edc8e;
+        color: #fff;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        span.glyphicon {
+            float: right;
+            margin-top: 5px;
+        }
+
+
+
+        &:hover {
+            text-decoration: none;
+            background: rgb(95, 196, 95);
+        }
+
+        &.active {
+            background: #3CAD3C;
+        }
+
+        &:first-child {
+            margin-top: 0px;
+        }
+    }
+}
+
+.right-content {
+    h3 {
+        margin-top: 0px;
+    }
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.left-align {
+    padding-left: 0px;
+}
+
+.cleaner-list {
+	padding-left: 20px;
+}
+
+// home-page section header
+.hp-header {
+    position: relative;
+    img {
+        width: 100%;
+    }
+}
+
+.hp-header-text {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.hp-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+    text-shadow: 1px 1px 1px #616161;
+}
+
+.hp-tagline {
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    color: #616161;
+}
+
+
+.secondary-header {
+    background: url(../images/background.png);
+    background-size: 120%;
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+.our-team {
+    background: url(../images/geometric-tile.jpeg);
+    color: #FFFDFD;
+}
+
+.partner-bio {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #4D6669;
+    &:last-child {
+        border-bottom: 0px solid #4D6669;
+        padding-bottom: 0px;
+    }
+}
+
+.bio-contact-box {
+    background: #FFFDFD;
+    color: rgb(85, 84, 84);
+    margin-right: 20px;
+    box-shadow: 4px 4px 0px #3B5B5E;
+
+    img {
+        height: 200px;
+        float: left;
+    }
+
+    .bio-contact-info {
+        display: inline-block;
+        padding-left: 20px;
+        padding-top: 20px;
+        height: 200px;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.bio-copy {
+    p {
+        font-weight: lighter;
+    }
+
+}
+
+/* Custom page footer */
+.footer {
+    color: #fff;
+    background: #576C6D;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}

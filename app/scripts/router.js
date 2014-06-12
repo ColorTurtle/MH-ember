@@ -1,6 +1,8 @@
 App.Router.map(function () {
   // Add your routes here
-  this.resource('about');
+  this.resource('aboutUs', function(){
+  	this.resource('aboutItem', { path: ':aboutItem_id' });
+  });
   this.resource('services', function(){
 	  this.resource('service', { path: ':service_id' });
   });
@@ -47,7 +49,35 @@ App.ServiceRoute = Ember.Route.extend({
 	}
 });
 
+App.AboutUsRoute = Ember.Route.extend({
+	model: function() {
+		return abouts;
+	},
+
+	renderTemplate: function() {
+		this.render ('aboutUs', {
+			into: 'application',
+			outlet: 'content'
+		});
+		
+	}
+});
+
+App.AboutItemRoute = Ember.Route.extend({
+	model: function(params) {
+		return abouts.findBy('id', params.aboutItem_id);
+	}, 
+
+	renderTemplate: function() {
+		this.render ('aboutItem', {
+			into: 'aboutUs'
+		})
+	}
+});
+
+
 // Using markdown to style the 'summary' information
+// Service Pages Copy
 var services = [{
 	id: 'services',
 	linkTitle: 'Services',
@@ -89,7 +119,7 @@ var services = [{
 	<li>We look for managers who share our investment philosophy and offer long-term added value to our clients.</li>\
 	<li>MHP conducts a review on every manager who is added to a client portfolio. We also consider manager analysis of third parties, if they meet our quality criteria. In certain cases we also interview the managers personally.</li>\
 	<li>Our methodology focuses on gaining an understanding of the fund\'s investment process, the strategy\'s risk and return drivers, as well as the manager\'s objectives and philosophies. We predominantly apply qualitative criteria as opposed to quantitative criteria.</li>\
-	<li>We avoid funds with an excessive use of leverage or difficult to understand („black box“) strategies.</li>\
+	<li>We avoid funds with an excessive use of leverage or difficult to understand ("black box") strategies.</li>\
 	<li>Once included on the MHP platform, funds and managers are monitored on a regular basis.</li>\
 	</ul> \
 	<h3>Instrument Selection</h3> \
@@ -108,3 +138,41 @@ var services = [{
 	</ul>'
 }];
 
+// About Us Pages copy
+var abouts = [{
+	id: 'about-us',
+	linkTitle: 'About Us',
+	title: 'Mori Huston Difference',
+	summary: '<p><strong>Mori Huston Partners is a unique investment management firm.</strong> As an Independent Investment Adviser, we offer highly customized, independent and transparent wealth and asset management services for families, individuals and institutions.</p>\
+	<p>Our <strong>boutique and entrepreneurial</strong> nature allows us to always be a step ahead. As true innovators we use our expertise and enterprise to source exciting new investment opportunities, but it is our agility which allows us to move quickly to gain the advantage.</p>\
+	<p>Our position as an <strong>independent</strong> firm is key. We are not associated to any financial institution. This guarantees decision making that only serves the needs and goals of our clients. Moreover we have a legal fiduciary responsibility to our clients and are held to higher standards by the regulators than bankers and brokers.</p>\
+	<p>Mori Huston Partners maintains a <strong>high degree of confidentiality</strong> for its clients, and isolates the client from an ever changing industry by providing stability to the relationship.</p>\
+	<p>Our <strong>services</strong> range from discretionary portfolio management to non-discretionary investment advice. We service individual accounts or an entire family of accounts at different financial institutions on a consolidated basis.</p>'
+}, {
+	id: 'our-clients',
+	linkTitle: 'Our Clients',
+	title: 'Our Clients',
+	summary: '<p>Many of our clients are first or second generation entrepreneurs and professionals. Their backgrounds are diverse, yet all share a conviction to preserve and protect their wealth for the long term.</p>\
+	<p>We consider it our responsibility to honor that commitment by delivering the very best strategic investment solutions, while respecting the confidential nature of this process.</p>\
+	<p>Our clients\' trust is our greatest accolade, and it is our privilege to earn it today and for future generations.</p>'
+}, {
+	id: 'company-profile',
+	linkTitle: 'Company Profile',
+	title: 'Company Profile',
+	summary: '<p>Mori Huston Partners is a limited liability company (LLC) under the laws of the United States, with its main office in Miami, Florida. The company is a SEC registered Investment Adviser.</p>\
+	<p>We act on behalf of our clients through a limited power of attorney. The customer\'s capital lies in an account at a deposit bank. We have established preferred custodial relationships in booking centers around the globe and negotiated special conditions for our clients. We do however work with other institutions, if that is the client\'s preferred choice.</p>'
+}, {
+	id: 'code-of-ethics',
+	linkTitle: 'Code of Ethics',
+	title: 'Code of Ethics and Standards of Professional Conduct',
+	summary: '<p>A commitment to professional ethics is fundamental to our values. Therefore we have adopted the Code of Ethics and Standards of Professional Conduct of the CFA Institute, which are the ethical benchmarks for investment professionals around the globe.</p>\
+	<p>As we believe that ethical leadership begins at the highest levels of an organization, all our partners and other employees must adhere to these Codes and Standards as well as to the additional, detailed policies and procedures to implement them.</p>\
+	<a href="http://www.morihuston.com/media/Codes/cfa%20english%20code.pdf" target="blank">CFA Institue Code of Ethics and Standards of Professional Conduct</a>'
+}, {
+	id: 'filings-and-disclosures',
+	linkTitle: 'Filings and Disclosures',
+	title: 'Filings and Disclosures',
+	summary: '<ul class="cleaner-list"><li><a href="http://morihuston.com/media/Codes/MoriHustonADVFirmBrochureMarch2014.pdf" target="blank">ADV Part 2 Firm Brochure</a></li>\
+	<li>Link to SEC website "<a href="http://www.adviserinfo.sec.gov/IAPD/Content/Search/iapd_Search.aspx" target="blank">investment adviser search</a>". Use CRD # 151260 to look up Mori Huston Partners LLC.</li>\
+	<li><a href="http://morihuston.com/media/Codes/Business%20Continuity%20Plan%20Disclosure%20Statement.pdf" target="blank">Business Continuity Plan Disclosure Statement</a></li>'
+}];

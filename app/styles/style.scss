@@ -71,6 +71,42 @@ a {
     }
 }
 
+	.nav-mobile {
+		display: none;
+		position: relative;
+		line-height: 40px;
+		font-size: 18px;
+
+		ul {
+			list-style: none;
+		}
+
+		span {
+			padding: 5px 8px;
+			display: inline;
+			border: 1px solid #4295c5;
+			color: #4295c5;
+			background: white;
+
+			&:hover {
+				color: white;
+				background: #4295c5;
+			}
+		}
+	}
+
+	.dropdown-menu > li > a {
+		color: #4295c5;
+		padding: 10px 30px;
+		font-size: 18px;
+
+	}
+
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+		color: white;
+		background: #4295c5;
+	}
+
  // Buttons
 .btn-login {
     border-radius: 4px;
@@ -190,6 +226,20 @@ button.cta-btn {
     }
 }
 
+.hp-header-mobile {
+		display: none;
+		position: relative;
+    img {
+        width: 100%;
+    }
+
+	  .hp-header-text {
+	    position: absolute;
+	    top: 30%;
+	    width: 100%;
+		}
+}
+
 .hp-header-text {
     position: absolute;
     top: 30%;
@@ -250,6 +300,7 @@ button.cta-btn {
     color: rgb(85, 84, 84);
     margin-right: 20px;
     box-shadow: 4px 4px 0px #3B5B5E;
+    width: 95%;
 
     img {
         height: 200px;
@@ -258,7 +309,7 @@ button.cta-btn {
 
     .bio-contact-info {
         display: inline-block;
-        padding-left: 20px;
+        padding-left: 30px;
         padding-top: 20px;
         height: 200px;
 
@@ -269,6 +320,7 @@ button.cta-btn {
 }
 
 .bio-copy {
+	margin-top: 0px;
     p {
         font-weight: lighter;
     }
@@ -307,6 +359,42 @@ button.cta-btn {
 }
 
 /* Responsive: Portrait tablets and up */
+@media screen and (max-width: 994px) {
+	.nav-options {
+		display: none;
+	}
+
+	.nav-mobile {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 992px){
+	.bio-contact-box img {
+		height: inherit;
+		width: 100%;
+	}
+
+	.left-align {
+		padding-left: 15px;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.hp-header-text {
+		top: 10%;
+	}
+
+	.hp-title {
+		font-size: 3em;
+	}
+
+	.hp-tagline {
+		font-size: 1.5em;
+	}
+}
+
+
 @media screen and (min-width: 768px) {
     .container {
         max-width: 1200px;
@@ -330,3 +418,44 @@ button.cta-btn {
         border-bottom: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+	.bio-contact-box img {
+		height: 200px;
+		width: inherit;
+	}
+
+	.bio-copy {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.hp-header {
+		display: none;
+	}
+
+	.hp-header-mobile {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 495px) {
+	.bio-contact-box img {
+		height: 160px;
+	}
+
+	.bio-contact-box .bio-contact-info {
+		height: 160px;
+		padding-left: 10px;
+		padding-top: 10px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.navigation img.logo {
+		width: 300px;
+	}
+}
+

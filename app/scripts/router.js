@@ -7,15 +7,43 @@ App.Router.map(function () {
   this.resource('contact');
 });
 
+App.IndexRoute = Ember.Route.extend({
+	renderTemplate: function() {
+		this.render ('hpHeader', {
+			into: 'application',
+			outlet: 'hpHeader'
+		});
+		this.render('index', {
+			into: 'application',
+			outlet: 'content'
+		})	
+	}
+
+});
+
 App.ServicesRoute = Ember.Route.extend({
 	model: function() {
 		return services;
+	},
+
+	renderTemplate: function() {
+		this.render ('services', {
+			into: 'application',
+			outlet: 'content'
+		});
+		
 	}
 });
 
 App.ServiceRoute = Ember.Route.extend({
 	model: function(params) {
 		return services.findBy('id', params.service_id);
+	}, 
+
+	renderTemplate: function() {
+		this.render ('service', {
+			into: 'services'
+		})
 	}
 });
 
@@ -64,7 +92,7 @@ var services = [{
 	<li>We avoid funds with an excessive use of leverage or difficult to understand („black box“) strategies.</li>\
 	<li>Once included on the MHP platform, funds and managers are monitored on a regular basis.</li>\
 	</ul> \
-	<h4>Instrument Selection</h4> \
+	<h3>Instrument Selection</h3> \
 	<p>Our equities and bond selection is also driven by our quest for value. We use our own as well as third party research.</p> \
 	<p>Equities</p> \
 	<ul class="cleaner-list"> \

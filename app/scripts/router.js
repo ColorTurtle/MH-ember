@@ -6,7 +6,9 @@ App.Router.map(function () {
   this.resource('services', function(){
 	  this.resource('service', { path: ':service_id' });
   });
-  this.resource('contact');
+  this.resource('contact', function(){
+  	this.resource('contactItem', { path: ':contactItem_id'});
+  });
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -75,6 +77,31 @@ App.AboutItemRoute = Ember.Route.extend({
 	renderTemplate: function() {
 		this.render ('aboutItem', {
 			into: 'aboutUs'
+		})
+	}
+});
+
+App.ContactRoute = Ember.Route.extend({
+	model: function() {
+		return contacts;
+	},
+
+	renderTemplate: function() {
+		this.render ('contact', {
+			into: 'application',
+			outlet: 'content'
+		});
+	}
+});
+
+App.ContactItemRoute = Ember.Route.extend({
+	model: function(params) {
+		return contacts.findBy('id', params.contactItem_id);
+	},
+
+	renderTemplate: function() {
+		this.render ('contactItem', {
+			into: 'contact'
 		})
 	}
 });
@@ -174,9 +201,26 @@ var abouts = [{
 	<a href="http://www.morihuston.com/media/Codes/cfa%20english%20code.pdf" target="blank">CFA Institue Code of Ethics and Standards of Professional Conduct</a>'
 }, {
 	id: 'filings-and-disclosures',
-	linkTitle: 'Filings and Disclosures',
+	linkTitle: 'Filings & Disclosures',
 	title: 'Filings and Disclosures',
 	summary: '<ul class="cleaner-list"><li><a href="http://morihuston.com/media/Codes/MoriHustonADVFirmBrochureMarch2014.pdf" target="blank">ADV Part 2 Firm Brochure</a></li>\
 	<li>Link to SEC website "<a href="http://www.adviserinfo.sec.gov/IAPD/Content/Search/iapd_Search.aspx" target="blank">investment adviser search</a>". Use CRD # 151260 to look up Mori Huston Partners LLC.</li>\
 	<li><a href="http://morihuston.com/media/Codes/Business%20Continuity%20Plan%20Disclosure%20Statement.pdf" target="blank">Business Continuity Plan Disclosure Statement</a></li>'
+}];
+// Contact Page Items
+var contacts = [{
+	id: 'contact-details',
+	linkTitle: 'Contact Details',
+	title: 'Come By Our Office',
+	summary: '<h4>Mori Huston Partners LLC</h4>\
+	<p>Main Office:</p>\
+	<span class="address-text">1450 Brickell Avenue</span>\
+	<span class="address-text">Suite 2160</span>\
+	<span class="address-text">Miami, FL 33131</span><br>\
+	<p>You can also reach any of our partners through our contact information listed below.</p>'
+}, {
+	id: 'send-email',
+	linkTitle: 'Send E-mail',
+	title: 'Send Us An E-mail',
+	summary: '<p>Get started today.</p>'
 }];

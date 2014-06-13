@@ -37,6 +37,11 @@ a {
     font-weight: lighter;
 }
 
+.address-text {
+	display: block;
+	font-style: italic;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -103,6 +108,15 @@ a {
 		color: #4295c5;
 		padding: 10px 30px;
 		font-size: 18px;
+
+        &.active {
+            background: #3885B1;
+            color: white;
+
+            span {
+                color: white;
+            }
+        }
 
 	}
 
@@ -191,6 +205,12 @@ button.cta-btn {
             text-decoration: none;
         }
     }
+
+    .active {
+    	li {
+    		background: #43A343;
+    	}
+    }
     
     li {
         border: 1px solid rgb(95, 196, 95);
@@ -228,6 +248,7 @@ button.cta-btn {
 .right-content {
     h3 {
         margin-top: 0px;
+        margin-bottom: 20px;
         text-transform: capitalize;
     }
 }
@@ -385,6 +406,16 @@ button.cta-btn {
     }
 }
 
+@media screen and (max-width: 1200px) {
+	.bio-contact-box .bio-contact-info {
+		padding-left: 20px;
+		padding-top: 12px;
+		width: 240px;
+		word-wrap: break-word;
+		font-size: 16px;
+	}
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (max-width: 994px) {
 	.nav-options {
@@ -401,6 +432,14 @@ button.cta-btn {
 		height: inherit;
 		width: 100%;
 	}
+
+	.bio-contact-box .bio-contact-info {
+		padding-left: 30px;
+		padding-top: 20px;
+		height: 200px;
+		
+	}
+
 
 	.left-align {
 		padding-left: 15px;
@@ -476,7 +515,8 @@ button.cta-btn {
 		height: 160px;
 		padding-left: 10px;
 		padding-top: 10px;
-		font-size: 14px;
+		font-size: 12px;
+		width: 170px;
 	}
 }
 
@@ -487,7 +527,11 @@ button.cta-btn {
 }
 
 @media screen and (max-width: 400px) {
-	.navigation img.logo {
+	.sub-nav {
+        font-size: 15px;
+    }
+    
+    .navigation img.logo {
 		width: 250px;
 	}
 

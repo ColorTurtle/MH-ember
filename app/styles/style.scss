@@ -45,6 +45,10 @@ a {
     padding-right: 15px;
 }
 
+.mobile-only {
+	display: none;
+}
+
 .left-content {
     padding-right: 60px;
 }
@@ -108,6 +112,25 @@ a {
 
 		span {
 			color: white;
+		}
+	}
+
+	.dropdown-menu {
+		padding: 0px;
+		min-width: 300px;
+		border-radius: 0px;
+		li {
+			width: 100%;
+			border: 1px solid #4295c5;
+		}
+
+		span {
+			float: right;
+			margin-top: -5px;
+			padding-right: 25px;
+			border: 0px;
+			background: inherit;
+			margin-right: -20px;
 		}
 	}
 
@@ -442,25 +465,6 @@ button.cta-btn {
 	.hp-header-mobile {
 		display: inline-block;
 	}
-
-	.dropdown-menu {
-		padding: 0px;
-		min-width: 300px;
-		border-radius: 0px;
-		li {
-			width: 100%;
-			border: 1px solid #4295c5;
-		}
-
-		span {
-			float: right;
-			margin-top: -5px;
-			padding-right: 25px;
-			border: 0px;
-			background: inherit;
-			margin-right: -20px;
-		}
-	}
 }
 
 @media screen and (max-width: 495px) {
@@ -479,6 +483,33 @@ button.cta-btn {
 @media screen and (max-width: 415px) {
 	.navigation img.logo {
 		width: 300px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navigation img.logo {
+		width: 250px;
+	}
+
+	.desktop-only {
+		display: none;
+	}
+
+	.mobile-only {
+		display: inline-block;
+	}
+
+	.bio-contact-box img {
+		height: 166px;
+	}
+
+	.bio-contact-box .bio-contact-info {
+		height: 166px;
+		padding-left: 10px;
+		padding-top: 10px;
+		font-size: 12px;
+		width: 120px;
+		word-wrap: break-word;
 	}
 }
 

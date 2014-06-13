@@ -105,6 +105,10 @@ a {
 	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
 		color: white;
 		background: #4295c5;
+
+		span {
+			color: white;
+		}
 	}
 
  // Buttons
@@ -437,6 +441,25 @@ button.cta-btn {
 
 	.hp-header-mobile {
 		display: inline-block;
+	}
+
+	.dropdown-menu {
+		padding: 0px;
+		min-width: 300px;
+		border-radius: 0px;
+		li {
+			width: 100%;
+			border: 1px solid #4295c5;
+		}
+
+		span {
+			float: right;
+			margin-top: -5px;
+			padding-right: 25px;
+			border: 0px;
+			background: inherit;
+			margin-right: -20px;
+		}
 	}
 }
 

@@ -18,7 +18,11 @@ App.IndexRoute = Ember.Route.extend({
 		this.render('index', {
 			into: 'application',
 			outlet: 'content'
-		})	
+		});
+		this.render('hpHeaderMobile', {
+			into: 'application',
+			outlet: 'mobile'	
+		}); 
 	}
 
 });

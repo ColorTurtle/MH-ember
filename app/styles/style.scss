@@ -42,6 +42,10 @@ a {
 	font-style: italic;
 }
 
+.visible {
+    display: block;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

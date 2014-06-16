@@ -198,14 +198,14 @@ var abouts = [{
 	title: 'Code of Ethics and Standards of Professional Conduct',
 	summary: '<p>A commitment to professional ethics is fundamental to our values. Therefore we have adopted the Code of Ethics and Standards of Professional Conduct of the CFA Institute, which are the ethical benchmarks for investment professionals around the globe.</p>\
 	<p>As we believe that ethical leadership begins at the highest levels of an organization, all our partners and other employees must adhere to these Codes and Standards as well as to the additional, detailed policies and procedures to implement them.</p>\
-	<a href="http://www.morihuston.com/media/Codes/cfa%20english%20code.pdf" target="blank">CFA Institue Code of Ethics and Standards of Professional Conduct</a>'
+	<a href="images/cfa-english-code.pdf" target="blank">CFA Institue Code of Ethics and Standards of Professional Conduct</a>'
 }, {
 	id: 'filings-and-disclosures',
 	linkTitle: 'Filings & Disclosures',
 	title: 'Filings and Disclosures',
-	summary: '<ul class="cleaner-list"><li><a href="http://morihuston.com/media/Codes/MoriHustonADVFirmBrochureMarch2014.pdf" target="blank">ADV Part 2 Firm Brochure</a></li>\
+	summary: '<ul class="cleaner-list"><li><a href="images/MoriHustonADVFirmBrochureMarch2014.pdf" target="blank">ADV Part 2 Firm Brochure</a></li>\
 	<li>Link to SEC website "<a href="http://www.adviserinfo.sec.gov/IAPD/Content/Search/iapd_Search.aspx" target="blank">investment adviser search</a>". Use CRD # 151260 to look up Mori Huston Partners LLC.</li>\
-	<li><a href="http://morihuston.com/media/Codes/Business%20Continuity%20Plan%20Disclosure%20Statement.pdf" target="blank">Business Continuity Plan Disclosure Statement</a></li>'
+	<li><a href="images/BusinessContinuityPlanDisclosureStatement.pdf" target="blank">Business Continuity Plan Disclosure Statement</a></li>'
 }];
 // Contact Page Items
 var contacts = [{

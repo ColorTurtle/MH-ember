@@ -8,12 +8,6 @@ require('scripts/routes/*');
 require('scripts/views/*');
 require('scripts/router');
 
-var showdown = new Showdown.converter();
-
-Ember.Handlebars.helper('format-markdown', function(input) {
-  return new Handlebars.SafeString(showdown.makeHtml(input));
-});
-
 Ember.LinkView.reopen({
   attributeBindings: ['role', 'tabindex']
 });

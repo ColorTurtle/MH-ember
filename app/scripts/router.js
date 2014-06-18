@@ -11,7 +11,18 @@ App.Router.map(function () {
   });
 });
 
-App.IndexRoute = Ember.Route.extend({
+App.ResetScroll = Ember.Mixin.create({
+  activate: function() {
+    this._super();
+    window.scrollTo(0,0);
+  }
+});
+
+App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
+		activate: function() {
+    this._super.apply(this, arguments);
+   },
+
 	renderTemplate: function() {
 		this.render ('hpHeader', {
 			into: 'application',
@@ -29,11 +40,15 @@ App.IndexRoute = Ember.Route.extend({
 
 });
 
-App.ServicesRoute = Ember.Route.extend({
+App.ServicesRoute = Ember.Route.extend(App.ResetScroll, {
 	model: function() {
 		return services;
 	},
 
+	activate: function() {
+    this._super.apply(this, arguments);
+   },
+	
 	renderTemplate: function() {
 		this.render ('services', {
 			into: 'application',
@@ -43,10 +58,15 @@ App.ServicesRoute = Ember.Route.extend({
 	}
 });
 
-App.ServiceRoute = Ember.Route.extend({
+App.ServiceRoute = Ember.Route.extend(App.ResetScroll, {
 	model: function(params) {
 		return services.findBy('id', params.service_id);
 	}, 
+
+	activate: function() {
+    this._super.apply(this, arguments);
+   },
+
 
 	renderTemplate: function() {
 		this.render ('service', {

@@ -58,7 +58,12 @@ a {
 	display: none;
 }
 
+.right-content {
+    padding-right: 100px;
+}
+
 .left-content {
+    padding-left: 100px;
     padding-right: 60px;
 }
 
@@ -95,11 +100,13 @@ a {
 		}
 
 		button {
-			padding: 7px 26px 10px 10px;
-			display: inline;
-			border: 1px solid #4295c5;
-			color: #4295c5;
-			background: white;
+			padding: 7px 33px 10px 13px;
+            display: inline;
+            border: 1px solid #4295c5;
+            color: #4295c5;
+            background: white;
+            border-radius: 4px;
+            font-size: 22px;
 
 			&:hover {
 				color: white;
@@ -418,6 +425,15 @@ button.cta-btn {
 		word-wrap: break-word;
 		font-size: 16px;
 	}
+
+    .left-content {
+        padding-left: 80px;
+        padding-right: 40px;
+    }
+
+    .right-content {
+        padding-right: 80px;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
@@ -441,9 +457,15 @@ button.cta-btn {
 		padding-left: 30px;
 		padding-top: 20px;
 		height: 200px;
-		
 	}
 
+    .left-content {
+        padding-left: 60px;
+    }
+
+    .right-content {
+        padding-right: 60px;
+    }
 
 	.left-align {
 		padding-left: 15px;
@@ -490,7 +512,16 @@ button.cta-btn {
 }
 
 @media screen and (max-width: 768px) {
-	.bio-contact-box img {
+	.left-content {
+        padding: 0px 60px;
+    }
+
+    .right-content {
+        padding: 0px 60px;
+        margin-top: 40px;
+    }
+
+    .bio-contact-box img {
 		height: 200px;
 		width: inherit;
 	}
@@ -531,7 +562,15 @@ button.cta-btn {
 }
 
 @media screen and (max-width: 400px) {
-	.sub-nav {
+	.left-content {
+        padding: 0px 30px;
+    }
+
+    .right-content {
+        padding: 0px 30px;
+    }
+
+    .sub-nav {
         font-size: 15px;
     }
 

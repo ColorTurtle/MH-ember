@@ -54,6 +54,7 @@ App.ServicesRoute = Ember.Route.extend(App.ResetScroll, {
 			into: 'application',
 			outlet: 'content'
 		});
+		window.scrollTo(0,0);
 		
 	}
 });
@@ -71,7 +72,9 @@ App.ServiceRoute = Ember.Route.extend(App.ResetScroll, {
 	renderTemplate: function() {
 		this.render ('service', {
 			into: 'services'
-		})
+		});
+		window.scrollTo(0,0);
+
 	}
 });
 
@@ -85,6 +88,7 @@ App.AboutUsRoute = Ember.Route.extend({
 			into: 'application',
 			outlet: 'content'
 		});
+		window.scrollTo(0,0);
 		
 	}
 });
@@ -97,7 +101,8 @@ App.AboutItemRoute = Ember.Route.extend({
 	renderTemplate: function() {
 		this.render ('aboutItem', {
 			into: 'aboutUs'
-		})
+		});
+		window.scrollTo(0,0);
 	}
 });
 
@@ -111,6 +116,7 @@ App.ContactRoute = Ember.Route.extend({
 			into: 'application',
 			outlet: 'content'
 		});
+		window.scrollTo(0,0);
 	}
 });
 
@@ -122,7 +128,8 @@ App.ContactItemRoute = Ember.Route.extend({
 	renderTemplate: function() {
 		this.render ('contactItem', {
 			into: 'contact'
-		})
+		});
+		window.scrollTo(0,0);
 	}
 });
 
@@ -157,7 +164,7 @@ var services = [{
 	<p><strong>Expectations and Governance:</strong> To us it is of critical importance to engage the client in the investment process. Only this way will we be able to find out how the client really feels about portfolio diversification, volatility, capital loss, specific asset classes or liquidity. Engagement also means offering education on investment issues, and creating realistic risk and return expectations. We want to provide the client with a sense of ownership in the investment process, as we believe strong and informed governance on the client’s part is an essential ingredient for a successful long-term relationship. </p>  \
 	<p><strong>Monitoring and Review:</strong> A review of the investment policy and monitoring of the portfolio performance are critical. Portfolios need at a regular checkup to review the policy objectives and their implementation over the previous year. If the objectives are no longer appropriate, then they need to be changed. </p> '
 }, {
-	id: 'assetallocation',
+	id: 'asset-allocation',
 	linkTitle: 'Active Asset Allocation',
 	title: 'Active Asset Allocation',
 	summary: '<p>The investment policy sets the long-term policy allocation. Within this policy framework we are able to implement our <strong>active asset allocation</strong>. In forming return expectations for asset classes we use a combination of risk premium, intrinsic value, and global macroeconomic analysis. Our risk premium analysis is highly influenced by our views on economic growth. We evaluate the long-term growth potential of the global economies, their political risks, and demographic trends as well as structural changes within economies, and for the global economy as a whole. This is especially important in times of seismic shifts in the global political and economic landscape. Combining all these different parts, we get a good view of the intrinsic value of each asset class, and how this compares to the value currently offered in the market place.</p> \
@@ -242,5 +249,6 @@ var contacts = [{
 	id: 'send-email',
 	linkTitle: 'Send E-mail',
 	title: 'Send Us An E-mail',
-	summary: '<p>Get started today.</p>'
+	summary: '<p>Get started today.</p> \
+	<a id="bcf_trigger" href="http://bettercontactform.com" rel="bcf_trigger">Free Contact Form</a>'
 }];

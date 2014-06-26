@@ -116,13 +116,14 @@ h1, h2, h3 {
 	}
 
 	button {
-		padding: 7px 33px 10px 13px;
-        display: inline;
-        border: 1px solid #4295c5;
-        color: #4295c5;
-        background: white;
-        border-radius: 4px;
-        font-size: 22px;
+    line-height: normal;
+		padding: 2px 9px;
+    display: inline;
+    border: 1px solid #4295c5;
+    color: #4295c5;
+    background: white;
+    border-radius: 4px;
+    font-size: 24px;
 
 		&:hover {
 			color: white;
@@ -180,6 +181,7 @@ h1, h2, h3 {
     padding: 0px;
     min-width: 300px;
     border-radius: 0px;
+    top: inherit;
     li {
       width: 100%;
       border: 1px solid #4295c5;
@@ -244,6 +246,55 @@ button.cta-btn {
   }
 
 }
+
+// Mega-Menu for dropdown button
+.menu-large {
+  position: static !important;
+}
+.megamenu{
+  padding: 0px 0px;
+  width:100%;
+}
+.megamenu> li > ul {
+  padding: 0;
+  margin: 0;
+}
+.megamenu> li > ul > li {
+  list-style: none;
+}
+.megamenu> li > ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: normal;
+}
+.megamenu> li ul > li > a:hover,
+.megamenu> li ul > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+.megamenu.disabled > a,
+.megamenu.disabled > a:hover,
+.megamenu.disabled > a:focus {
+  color: #999999;
+}
+.megamenu.disabled > a:hover,
+.megamenu.disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.megamenu.dropdown-header {
+  color: #428bca;
+  font-size: 18px;
+}
+// End Mega menu styling
 
 .sub-nav {
   padding-left: 0px;
@@ -358,8 +409,8 @@ button.cta-btn {
 
 
 .secondary-header {
-  background: url(../images/background.png);
-  background-size: 120%;
+  background: url(../images/mh-bg04.gif)no-repeat center top;
+  background-size: 100%;
 }
 
 .header {
@@ -375,7 +426,7 @@ button.cta-btn {
 }
 
 .our-team {
-  background: url(../images/geometric-tile.jpeg);
+  background: url(../images/geometric-tile.gif);
   color: #FFFDFD;
 
   h2 {
@@ -616,7 +667,16 @@ button.cta-btn {
 }
 
 @media screen and (max-width: 400px) {
-	.left-content {
+	// .nav-mobile button {
+ //    padding: 0px 30px 0px 11px;
+ //    font-size: 20px;
+ //  }
+
+  .secondary-header {
+    background: url(../images/mh-bg--mobile.gif)no-repeat center top;
+  }
+
+  .left-content {
         padding: 0px 30px;
     }
 
@@ -629,7 +689,7 @@ button.cta-btn {
     }
 
     .navigation img.logo {
-    width: 250px;
+    width: 240px;
   }
 
   .desktop-only {

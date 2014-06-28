@@ -249,6 +249,6 @@ var contacts = [{
 	id: 'send-email',
 	linkTitle: 'Send E-mail',
 	title: 'Send Us An E-mail',
-	summary: '<p>Get started today.</p> \
-	<a id="bcf_trigger" href="http://bettercontactform.com" rel="bcf_trigger">Free Contact Form</a>'
+	summary: '<div class="bcf_content"><h2>Contact Us</h2> \
+	<button class="btn-login" rel="contactus">Contact Us</button>'
 }];

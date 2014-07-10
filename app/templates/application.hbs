@@ -7,7 +7,7 @@
             <li>{{#link-to 'aboutUs'}}About Us{{/link-to}}</li>
             <li>{{#link-to 'services'}}Services{{/link-to}}</li>
             <li><a href="#partners">Partners</a></li>
-            <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+            <li><button class="btn--contact" data-toggle="modal" data-target="#myModal">Contact</button></li>
             <li class='btn-login'><a href="https://cwp.morningstar.com/CRMWebPortal/CWPHome.aspx?ProductCode=CWP">Client Login</a></li>
         </ul>
         <div class="dropdown menu-large nav-mobile pull-right">
@@ -16,7 +16,7 @@
                 <li role="presentation">{{#link-to 'aboutUs' role="menuitem" tabindex="-1"}}About Us<span class="glyphicon glyphicon-chevron-right"></span>{{/link-to}}</li>
                 <li role="presentation">{{#link-to 'services' role="menuitem" tabindex="-1"}}Services<span class="glyphicon glyphicon-chevron-right"></span>{{/link-to}}</li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#partners">Partners<span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                <li role="presentation">{{#link-to 'contact' role="menuitem" tabindex="-1"}}Contact<span class="glyphicon glyphicon-chevron-right"></span>{{/link-to}}</li>
+                <li><button class="btn--contact" data-toggle="modal" data-target="#myModal">Contact<span class="glyphicon glyphicon-chevron-right"></span></button></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://cwp.morningstar.com/CRMWebPortal/CWPHome.aspx?ProductCode=CWP">Client Login<span class="glyphicon glyphicon-chevron-right"></span></a></li>
             </ul>
         </div>
@@ -119,11 +119,30 @@
         </div>
     </div>
 </div>
-<script> /* var bcf_settings = { buttonText:'Contact Us', buttonTop:'30%', language:'en_US' }; // Better Contact Form Settings */ (function (d, s, id) { if ('https:' == document.location.protocol || d.getElementById(id)) return; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.src = "http://bettercontactform.com/contact/media/7/3/734c6ad1320084b86ab047ad89a6dad3fc121f6a.js"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "bcf-render"));</script> <a id="bcf_trigger" href="http://bettercontactform.com" rel="bcf_trigger">Free Contact Form</a>
 <div class="footer">
     <div class="container">
         <p>Mori Huston Partners LLC 1450 Brickwell Avenue, Suite 2106, Miami FL 33131</p>
+        {{!-- Using translating button from http://www.webestools.com/translator-buttons-web-page-translation-google-translate-website-widget-online-html-translator.html --}}
+        <div id="translator_4576"><noscript>Javascript is disable - <a href="http://www.webestools.com/">http://www.webestools.com/</a> - <a href="http://www.webestools.com/translator-buttons-web-page-translation-google-translate-website-widget-online-html-translator.html">Translation Buttons Generator</a></noscript></div><script type="text/javascript" src="http://services.webestools.com/translator/4576-1-yynnnnnnn.js"></script>
     </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Fill Out our Form and we'll get back to you!</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        {{!-- <button type="button" class="btn btn-primary">Send</button> --}}
+      </div>
+    </div>
+  </div>
 </div>
 
 

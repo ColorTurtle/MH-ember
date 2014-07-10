@@ -21,6 +21,12 @@ App.ResetScroll = Ember.Mixin.create({
 App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
 		activate: function() {
     this._super.apply(this, arguments);
+    $('.navigation').removeClass('fixed-nav');
+    $('body').removeClass('fixed-nav-cushion');
+    $(document).on("scroll", function(){
+    	$('.navigation').toggleClass('fixed-nav-home', $(document).scrollTop()>400);
+		});
+
    },
 
 	renderTemplate: function() {
@@ -47,6 +53,9 @@ App.ServicesRoute = Ember.Route.extend(App.ResetScroll, {
 
 	activate: function() {
     this._super.apply(this, arguments);
+    $('.navigation').removeClass('fixed-nav');
+    $('.navigation').addClass('fixed-nav');
+    $('body').addClass('fixed-nav-cushion');
    },
 	
 	renderTemplate: function() {
@@ -82,6 +91,14 @@ App.AboutUsRoute = Ember.Route.extend({
 	model: function() {
 		return abouts;
 	},
+
+	activate: function() {
+    this._super.apply(this, arguments);
+    $('.navigation').removeClass('fixed-nav');
+    $('.navigation').addClass('fixed-nav');
+    $('body').addClass('fixed-nav-cushion');
+   },
+
 
 	renderTemplate: function() {
 		this.render ('aboutUs', {
@@ -252,3 +269,4 @@ var contacts = [{
 	summary: '<div class="bcf_content"><h2>Contact Us</h2> \
 	<button class="btn-login" rel="contactus">Contact Us</button>'
 }];
+

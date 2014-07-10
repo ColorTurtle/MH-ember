@@ -49,6 +49,26 @@ a {
   display: block;
 }
 
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.fixed-nav-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.fixed-nav-cushion {
+  margin-top: 100px;
+}
+
 .contact {
     margin-bottom: 10px;
 }
@@ -212,6 +232,40 @@ h1, h2, h3 {
       text-decoration: none;
       }
     }
+  }
+}
+
+.btn--contact {
+  background: #fbf6ef;
+  border: 0px;
+  color: rgb(66, 149, 197);
+  letter-spacing: 0.0525em;
+  padding: 0px;
+  font-weight: lighter;
+  &:hover {
+    color: #2085BF;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav-mobile button.btn--contact-mobile {
+  background: white;
+  border: 0px;
+  color: rgb(66, 149, 197);
+  letter-spacing: 0.0525em;
+  padding: 8px 15px;
+  font-weight: lighter;
+  &:hover {
+    color: #2085BF;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 

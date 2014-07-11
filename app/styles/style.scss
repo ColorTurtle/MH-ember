@@ -223,9 +223,11 @@ h1, h2, h3 {
   border-radius: 4px;
   border: 1px solid rgb(66, 149, 197);
   background: #fff;
+  color: #4295c5;
 
   &:hover {
     background: rgb(66, 149, 197);
+    color: white;
     a {
     color: white;
     &:hover {
@@ -411,7 +413,9 @@ button.cta-btn {
   }
 }
 
-.right-content {
+// Modal styling
+.modal-content {
+  border-radius: 0px;
 
 }
 

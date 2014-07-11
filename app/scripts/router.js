@@ -24,9 +24,11 @@ App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
     $('.navigation').removeClass('fixed-nav');
     $('body').removeClass('fixed-nav-cushion');
     $(document).on("scroll", function(){
-    	$('.navigation').toggleClass('fixed-nav-home', $(document).scrollTop()>400);
+    	$('.navigation').toggleClass('fixed-nav-home', $(document).scrollTop()>600);
 		});
-
+		if (screen.width<=599) {
+			$('.navigation').addClass('fixed-nav');
+		}
    },
 
 	renderTemplate: function() {
@@ -63,8 +65,7 @@ App.ServicesRoute = Ember.Route.extend(App.ResetScroll, {
 			into: 'application',
 			outlet: 'content'
 		});
-		window.scrollTo(0,0);
-		
+		window.scrollTo(0,0);		
 	}
 });
 

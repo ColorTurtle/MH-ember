@@ -252,13 +252,16 @@ h1, h2, h3 {
   }
 }
 
-.nav-mobile button.btn--contact-mobile {
+.nav-mobile button.btn--contact {
   background: white;
+  width: 100%;
   border: 0px;
-  color: rgb(66, 149, 197);
+  color: #4295c5;
   letter-spacing: 0.0525em;
-  padding: 8px 15px;
-  font-weight: lighter;
+  padding: 8px 30px;
+  font-size: 18px;
+  text-align: left;
+  font-weight: normal;
   &:hover {
     color: #2085BF;
     text-decoration: underline;
@@ -266,6 +269,16 @@ h1, h2, h3 {
 
   &:focus {
     outline: none;
+  }
+
+  span {
+    float: right;
+    margin-top: -5px;
+    padding-right: 25px;
+    border: 0px;
+    background: inherit;
+    margin-right: -20px;
+    line-height: 32px;
   }
 }
 
@@ -418,9 +431,16 @@ button.cta-btn {
 // home-page section header
 .hp-header {
   position: relative;
-  img {
-    width: 100%;
-  }
+  // img {
+  //   width: 100%;
+  // }
+}
+
+.hp-header-bg {
+  background: url(../images/deskphoto.jpg) no-repeat left bottom;
+  background-size: cover;
+  height: 600px;
+  overflow: hidden; 
 }
 
 .hp-header-mobile {
@@ -627,13 +647,13 @@ button.cta-btn {
     top: 10%;
   }
 
-  .hp-title {
-    font-size: 3em;
-  }
+  // .hp-title {
+  //   font-size: 3em;
+  // }
 
-  .hp-tagline {
-    font-size: 1.5em;
-  }
+  // .hp-tagline {
+  //   font-size: 1.5em;
+  // }
 }
 
 

@@ -2,8 +2,6 @@ App.Router.map(function () {
   // Add your routes here
   this.resource('aboutUs', function(){
   	this.resource('aboutItem', { path: ':aboutItem_id' });
-  	$('.sub-nav a:first-child').click();
-  	// $('.sub-nav a:first-child').click();
   });
   this.resource('services', function(){
 	  this.resource('service', { path: ':service_id' });
@@ -20,6 +18,8 @@ App.ResetScroll = Ember.Mixin.create({
   }
 });
 
+		// Not sure where to store this - perhaps in the controller?
+  	// $(".sub-nav").find("a.ember-view:first").click();
 App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
 		activate: function() {
     this._super.apply(this, arguments);
@@ -109,10 +109,7 @@ App.AboutUsRoute = Ember.Route.extend({
 			outlet: 'content'
 		});
 		window.scrollTo(0,0);
-		
 	}
-		// Not sure where to store this - perhaps in the controller?
-  	// $(".sub-nav").find("a.ember-view:first").click();
 });
 
 App.AboutItemRoute = Ember.Route.extend({

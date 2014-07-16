@@ -4,7 +4,7 @@
 <div class="col-sm-5 left-content">
     <ul class="sub-nav">
       {{#each}}
-      {{#link-to 'service' this}}<li>{{linkTitle}}<span class="glyphicon glyphicon-chevron-right"></span></li>{{/link-to}}
+      <li>{{#link-to 'service' this}}<button>{{linkTitle}}<span class="glyphicon glyphicon-chevron-right"></span></button>{{/link-to}}</li>
       {{/each}}
     </ul>
 </div>

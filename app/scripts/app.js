@@ -11,3 +11,4 @@ require('scripts/router');
 Ember.LinkView.reopen({
   attributeBindings: ['role', 'tabindex']
 });
+

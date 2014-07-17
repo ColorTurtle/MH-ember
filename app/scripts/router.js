@@ -67,7 +67,7 @@ App.ServicesRoute = Ember.Route.extend(App.ResetScroll, {
 			into: 'application',
 			outlet: 'content'
 		});
-		window.scrollTo(0,0);		
+		window.scrollTo(0,0);
 	}
 });
 
@@ -271,4 +271,3 @@ var contacts = [{
 	summary: '<div class="bcf_content"><h2>Contact Us</h2> \
 	<button class="btn-login" rel="contactus">Contact Us</button>'
 }];
-

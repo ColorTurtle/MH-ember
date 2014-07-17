@@ -169,6 +169,12 @@ h1, h2, h3 {
       &:hover {
         color: white;
         background: #4295c5;
+
+        .btn--contact {
+          color: white;
+          background: #4295c5;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -255,12 +261,12 @@ h1, h2, h3 {
 }
 
 .nav-mobile button.btn--contact {
-  background: white;
+  background: none;
   width: 100%;
   border: 0px;
   color: #4295c5;
   letter-spacing: 0.0525em;
-  padding: 8px 30px;
+  padding: 0;
   font-size: 18px;
   text-align: left;
   font-weight: normal;
@@ -366,6 +372,7 @@ button.cta-btn {
 // End Mega menu styling
 
 .sub-nav {
+  // position: relative;
   padding-left: 0px;
   a {
     color: #fff;
@@ -422,12 +429,6 @@ button.cta-btn {
       margin-top: 0px;
     }
   }
-}
-
-// Modal styling
-.modal-content {
-  border-radius: 0px;
-
 }
 
 .section {
@@ -751,9 +752,9 @@ button.cta-btn {
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 420px) {
   .navigation img.logo {
-    width: 300px;
+    width: 320px;
   }
 }
 

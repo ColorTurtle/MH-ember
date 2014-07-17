@@ -1,11 +1,18 @@
+{{!-- This template holds the following sections: header, navigation, partners, and footer. You 
+will find templates for the main-content (populated in div.secondary-header) under the app/templates
+with corresponding file names --}}
+{{!-- If you make changes to any of the templates within the app folder, after saving your changes you will need to run 'grunt build' in your terminal. This will rebuild the dist file which is designed for 
+use in production. --}}
 <div class="hp-header">
     {{outlet hpHeader}}
 </div>
 <div class="navigation">
     <div class="container">
         <ul class="nav-options pull-right cleaner-list">
-            <li>{{#link-to 'aboutUs'}}About Us{{/link-to}}</li>
-            <li>{{#link-to 'services'}}Services{{/link-to}}</li>
+            <li><a href="#/aboutUs/about-us">About Us</a></li>
+            {{!-- <li>{{#link-to 'aboutUs'}}About Us{{/link-to}}</li> --}}
+            <li><a href="#/services/services">Services</a></li>
+            {{!-- <li>{{#link-to 'services'}}Services{{/link-to}}</li> --}}
             <li><a href="#partners">Partners</a></li>
             {{!-- <li><button class="btn--contact" data-toggle="modal" data-target="#myModal">Contact</button></li> --}}
             <li><a href="https://morihuston.wufoo.com/forms/z15qsfd91mfw0f4/" onclick="window.open(this.href,  null, 'height=577, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false"><button class="btn--contact">Contact</button></a></li>
@@ -14,10 +21,10 @@
         <div class="dropdown menu-large nav-mobile pull-right">
             <button class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><span class="fa fa-navicon"></span></button>
             <ul class="dropdown-menu megamenu row" role="menu" aria-labeledby="dropdownMenu1">
-                <li role="presentation">{{#link-to 'aboutUs' role="menuitem" tabindex="-1"}}About Us<span class="glyphicon glyphicon-chevron-right"></span>{{/link-to}}</li>
-                <li role="presentation">{{#link-to 'services' role="menuitem" tabindex="-1"}}Services<span class="glyphicon glyphicon-chevron-right"></span>{{/link-to}}</li>
+                <li role="presentation"><a href="#/aboutUs/about-us" role="menuitem" tabindex="-1">About Us<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                <li role="presentation"><a href="#/services/services" role="menuitem" tabindex="-1">Services<span class="glyphicon glyphicon-chevron-right"></span></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#partners">Partners<span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                <li><button class="btn--contact" data-toggle="modal" data-target="#myModal">Contact<span class="glyphicon glyphicon-chevron-right"></span></button></li>
+                <li><a href="https://morihuston.wufoo.com/forms/z15qsfd91mfw0f4/" onclick="window.open(this.href,  null, 'height=577, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false"><button class="btn--contact">Contact<span class="glyphicon glyphicon-chevron-right"></span></button></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://cwp.morningstar.com/CRMWebPortal/CWPHome.aspx?ProductCode=CWP">Client Login<span class="glyphicon glyphicon-chevron-right"></span></a></li>
             </ul>
         </div>
@@ -124,43 +131,6 @@
     <div class="container">
         <p>Mori Huston Partners LLC 1450 Brickwell Avenue, Suite 2106, Miami FL 33131</p>
     </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        {{!-- <h4 class="modal-title" id="myModalLabel">Tell Us A Little About Yourself</h4> --}}
-      </div>
-      <div class="modal-body">
-        <div id="wufoo-z15qsfd91mfw0f4">
-            Fill out my <a href="https://morihuston.wufoo.com/forms/z15qsfd91mfw0f4">online form</a>.
-            </div>
-            <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">The easy to use <a href="http://www.wufoo.com/form-builder/">Wufoo form builder</a> helps you make forms easy, fast, and fun.</div>
-            <script type="text/javascript">var z15qsfd91mfw0f4;(function(d, t) {
-            var s = d.createElement(t), options = {
-            'userName':'morihuston',
-            'formHash':'z15qsfd91mfw0f4',
-            'autoResize':true,
-            'height':'577',
-            'async':true,
-            'host':'wufoo.com',
-            'header':'show',
-            'ssl':true};
-            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-            s.onload = s.onreadystatechange = function() {
-            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-            try { z15qsfd91mfw0f4 = new WufooForm();z15qsfd91mfw0f4.initialize(options);z15qsfd91mfw0f4.display(); } catch (e) {}};
-            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-            })(document, 'script');</script>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        {{!-- <button type="button" class="btn btn-primary">Send</button> --}}
-      </div>
-    </div>
-  </div>
 </div>
 
 
